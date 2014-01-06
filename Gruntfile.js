@@ -39,7 +39,7 @@ module.exports = function (grunt) {
               branch: 'build'
             }
           }
-        }
+        },
 
         // Project settings
         yeoman: {
@@ -441,7 +441,8 @@ module.exports = function (grunt) {
         'modernizr',
         'rev',
         'usemin',
-        'htmlmin'
+        'htmlmin',
+        'buildcontrol:pages'
     ]);
 
     grunt.registerTask('default', [
