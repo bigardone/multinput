@@ -1,0 +1,77 @@
+@import normalize.scss/normalize
+@import bower-bourbon/bourbon
+@import grid-settings
+@import bower-neat/neat
+@import "prism.css"
+
+@import variables
+@import mixins
+
+
+body
+  background: #fff
+  font-family: 'Droid Serif', serif
+  color: $main-color
+
+  .container
+    +outer-container
+    +center
+
+
+// Header
+#main_header
+  background: $gray-color
+
+  .call-to-action
+    +inline-block
+    +transition (all 0.2s linear)
+    background: $secondary-color
+    color: #fff
+    font-size: 1.3em
+    padding: 1em 3em
+    text-decoration: none
+    margin: 2em 0
+    &:hover
+      background: darken($secondary-color, 20)
+
+  .actions
+    margin: 1em 0
+    li
+      +inline-block
+  p
+    font-size: 2em
+    line-height: golden-ratio( 1em,  1 )
+
+#main-content
+  section
+    margin-bottom: 5em
+    font-size: 1.2em
+    color: lighten($main-color, 15)
+  ul
+    li
+      line-height: golden-ratio( 1em,  1 )
+
+#main-footer
+  border-top: 1px solid $gray-color
+  .container
+    padding: 3em 0
+
+
+
+h1, h2
+  font-family: 'Open Sans', sans-serif
+  color: $main-color
+
+h1
+  font-size: 4em
+  letter-spacing: -.1em
+  line-height: golden-ratio( .5em,  1 )
+h2
+  font-size: 2em
+  font-weight: normal
+
+.left
+  text-align: left
+.center
+  text-align: center
+

@@ -1,0 +1,33 @@
+@import bower-bourbon/bourbon
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea
+  +box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.1))
+  border-radius: 4px
+  background-color: white
+  border: 1px solid #cccccc
+  color: rgba(0, 0, 0, 0.75)
+  display: inline-block
+  padding: .5rem
+
+.multiple-inputs-wrapper
+  @include box-shadow( inset 0 0 4px #dedede )
+  @include inline-block
+  border-radius: 4px
+  -webkit-appearance: none
+  background-color: white
+  border: 1px solid #d4d4d4
+  width: auto
+  .multiple-inputs-part
+    @include box-shadow( 0 0 0 !important)
+    border-radius: 0px
+    background: transparent !important
+    border: 0px none !important
+    display: inline
+    border-right: 1px solid #d4d4d4 !important
+    margin: 0 !important
+
+    &:last-child
+      border-right: 0px none !important
+
+
+
