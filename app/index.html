@@ -12,6 +12,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="styles/prism.css">
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -21,8 +22,9 @@
     <link rel="stylesheet" href="styles/multinput.css">
     <!-- endbuild -->
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700|Open+Sans:600,400' rel='stylesheet' type='text/css'>
+    <!-- build:js scripts/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
-
+    <!-- endbuild -->
   </head>
   <body>
       <!--[if lt IE 10]>
@@ -90,13 +92,6 @@
 
 
 
-
-      <!-- build:js scripts/vendor.js -->
-      <!-- bower:js -->
-      <script src="bower_components/jquery/jquery.js"></script>
-      <!-- endbower -->
-      <!-- endbuild -->
-
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
       <script>
           (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -106,10 +101,16 @@
           r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
           ga('create','UA-XXXXX-X');ga('send','pageview');
       </script>
-
-      <!-- build:js scripts/main.js -->
+      <!-- build:js scripts/vendor.js -->
+      <!-- bower:js -->
+      <script src="bower_components/jquery/jquery.js"></script>
       <script src="scripts/prism.js"></script>
+      <!-- endbower -->
+      <!-- endbuild -->
+      <!-- build:js(.tmp) scripts/multinput.js -->
       <script src="scripts/multinput.js"></script>
+      <!-- endbuild -->
+      <!-- build:js(.tmp) scripts/main.js -->
       <script src="scripts/main.js"></script>
       <!-- endbuild -->
   </body>

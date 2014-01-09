@@ -21,24 +21,24 @@ module.exports = function (grunt) {
     grunt.initConfig({
 
         buildcontrol: {
-          options: {
-            dir: 'dist',
-            commit: true,
-            push: true,
-            message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-          },
-          pages: {
             options: {
-              remote: 'git@github.com:bigardone/multinput.git',
-              branch: 'gh-pages'
+                dir: 'dist',
+                commit: true,
+                push: true,
+                message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+            },
+            pages: {
+                options: {
+                    remote: 'git@github.com:bigardone/multinput.git',
+                    branch: 'gh-pages'
+                }
+            },
+            local: {
+                options: {
+                    remote: '../',
+                    branch: 'build'
+                }
             }
-          },
-          local: {
-            options: {
-              remote: '../',
-              branch: 'build'
-            }
-          }
         },
 
         // Project settings
@@ -441,8 +441,7 @@ module.exports = function (grunt) {
         'modernizr',
         'rev',
         'usemin',
-        'htmlmin',
-        'buildcontrol:pages'
+        'htmlmin'
     ]);
 
     grunt.registerTask('default', [
