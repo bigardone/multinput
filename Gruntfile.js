@@ -356,6 +356,20 @@ module.exports = function (grunt) {
                 cwd: '<%= yeoman.app %>/styles',
                 dest: '.tmp/styles/',
                 src: '{,*/}*.css'
+            },
+            lib: {
+                files: [
+                    {
+                        expand: true,
+                        dot: true,
+                        cwd: '.tmp/',
+                        dest: 'lib/',
+                        src: [
+                            'scripts/multinput.js',
+                            'styles/multinput.css'
+                        ]
+                    }
+                ]
             }
         },
 
@@ -438,6 +452,7 @@ module.exports = function (grunt) {
         'cssmin',
         'uglify',
         'copy:dist',
+        'copy:lib',
         'modernizr',
         'rev',
         'usemin',

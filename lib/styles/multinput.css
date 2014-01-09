@@ -1,0 +1,58 @@
+/* line 3, ../../app/styles/multinput.sass */
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  color: rgba(0, 0, 0, 0.75);
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+/* line 12, ../../app/styles/multinput.sass */
+
+.multiple-inputs-wrapper {
+  box-shadow: inset 0 0 4px #dedede;
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid #d4d4d4;
+  width: auto;
+}
+
+/* line 20, ../../app/styles/multinput.sass */
+
+.multiple-inputs-wrapper .multiple-inputs-part {
+  box-shadow: 0 0 0 !important;
+  border-radius: 0px;
+  background: transparent !important;
+  border: 0px none !important;
+  display: inline;
+  border-right: 1px solid #d4d4d4 !important;
+  margin: 0 !important;
+}
+
+/* line 29, ../../app/styles/multinput.sass */
+
+.multiple-inputs-wrapper .multiple-inputs-part:last-child {
+  border-right: 0px none !important;
+}
