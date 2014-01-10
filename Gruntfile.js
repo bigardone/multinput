@@ -15,7 +15,11 @@ module.exports = function (grunt) {
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
 
+    // Deploy to GitHub pages
     grunt.loadNpmTasks('grunt-build-control');
+
+    // Compress files
+    grunt.loadNpmTasks('grunt-contrib-compress');
 
     // Define the configuration for all the tasks
     grunt.initConfig({
@@ -370,9 +374,31 @@ module.exports = function (grunt) {
                         ]
                     }
                 ]
+            },
+            download: {
+                files: [
+                    {
+                        expand: true,
+                        dot: true,
+                        cwd: 'app/download',
+                        dest: 'dist/download',
+                        src: '*.zip'
+                    }
+                ]
             }
         },
 
+        // Compress lib files
+        compress: {
+          main: {
+            options: {
+              archive: 'app/download/multinput.zip'
+            },
+            files: [
+              {src: ['lib/**/*'] }, // includes files in path and its subdirs
+            ]
+          }
+        },
 
         // Generates a custom Modernizr build that includes only the tests you
         // reference in your app
@@ -451,8 +477,10 @@ module.exports = function (grunt) {
         'concat',
         'cssmin',
         'uglify',
+        'compress',
         'copy:dist',
         'copy:lib',
+        'copy:download',
         'modernizr',
         'rev',
         'usemin',
