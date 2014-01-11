@@ -1,1 +1,0 @@
-(function(){$(function(){return $("#example_input").multinput()})}).call(this);
