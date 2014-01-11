@@ -2,6 +2,8 @@ MultInput
 =========
 **MultInput** is a lightweight jQuery plugin that automatically splits your form inputs into multiple inputs with the help of a pattern.
 
+[Homepage](http://codeloveandboards.com/multinput/)
+
 ###Features
 - Lightweight jQuery plugin.
 - JavaScript and CoffeeScript versions.
