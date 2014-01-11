@@ -15,11 +15,11 @@ do ($ = jQuery, window, document) ->
 
     init: ->
       @$el = $(@element)
-      @pattern = if @$el.data('pattern') and @$el.data('pattern') != '' then @$el.data('pattern') else @$el.attr @settings.patternAttribute
-      @separator = if @$el.data('separator') and @$el.data('separator') != '' then @$el.data('separator') else @$el.attr @settings.separator
+      @pattern = if @$el.data('pattern')? then @$el.data('pattern') else @$el.attr @settings.patternAttribute
+      @separator = if @$el.data('separator')? then @$el.data('separator') else @$el.attr @settings.separator
 
       if @_validPattern()
-        @inputsClasses = if @$el.data('classes') and @$el.data('classes') != '' then @$el.data('classes') else @$el.attr @settings.inputsClasses
+        @inputsClasses = if @$el.data('classes')? then @$el.data('classes') else @settings.inputsClasses
         @value = @$el.val()
         @$el.hide()
         @$wrapper = $('<div class="multiple-inputs-wrapper"></div>').insertAfter @$el
