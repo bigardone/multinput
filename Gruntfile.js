@@ -324,15 +324,15 @@ module.exports = function (grunt) {
         //         }
         //     }
         // },
-        // uglify: {
-        //     dist: {
-        //         files: {
-        //             '<%= yeoman.dist %>/scripts/scripts.js': [
-        //                 '<%= yeoman.dist %>/scripts/scripts.js'
-        //             ]
-        //         }
-        //     }
-        // },
+        uglify: {
+            dist: {
+                files: {
+                    'lib/scripts/multinput.min.js': [
+                        'lib/scripts/multinput.js'
+                    ]
+                }
+            }
+        },
         // concat: {
         //     dist: {}
         // },
@@ -477,9 +477,10 @@ module.exports = function (grunt) {
         'concat',
         'cssmin',
         'uglify',
-        'compress',
         'copy:dist',
         'copy:lib',
+        'uglify',
+        'compress',
         'copy:download',
         'modernizr',
         'rev',
